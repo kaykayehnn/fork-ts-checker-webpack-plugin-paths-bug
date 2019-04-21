@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "noEmit": true,
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "paths": {
+      "@App/*": ["./*"]
+    }
+  },
+  "include": ["./src"]
+}
