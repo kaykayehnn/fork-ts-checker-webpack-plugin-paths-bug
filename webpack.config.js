@@ -1,11 +1,17 @@
 var ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
 var webpackConfig = {
   mode: 'none',
   context: __dirname, // to automatically find tsconfig.json
   entry: './src/index.ts',
   resolve: {
-    extensions: ['.ts']
+    extensions: ['.ts'],
+    plugins: [
+      new TsconfigPathsPlugin({
+        /*configFile: "./path/to/tsconfig.json" */
+      })
+    ]
   },
   module: {
     rules: [
